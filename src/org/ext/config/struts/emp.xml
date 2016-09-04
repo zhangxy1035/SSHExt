@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="emp" namespace="/" extends="struts-default">
+        <action name="emp_*" class="org.ext.action.EmpAction" method="{1}">
+            <result name="index">/admin/page/school/school/index.jsp</result>
+        </action>
+</package>
+</struts>
