@@ -8,7 +8,7 @@ import net.sf.json.JSONObject;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 /**
- * Title: 辅助�?
+ * Title: 辅助类
  * Description: 该类用于转换java对象为XML文件格式或JSON文件格式
  * @author special
  * @time: 2015.08.30
@@ -16,8 +16,8 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 public class ExtHelper {
 	/**
 	 * 通过List生成XML数据
-	 * @param recordTotal 记录总数，不�?��与beanList中的记录数相�?
-	 * @param beanList 包含bean对象的集�?
+	 * @param recordTotal 记录总数，不一定与beanList中的记录数相等
+	 * @param beanList 包含bean对象的集合
 	 * @return 生成的XML数据
 	 */
 	public static String getXmlFromList(long recordTotal , List beanList) {
@@ -38,7 +38,7 @@ public class ExtHelper {
 	}
 	/**
 	 * 通过List生成XML数据
-	 * @param beanList 包含bean对象的集�?
+	 * @param beanList 包含bean对象的集合
 	 * @return 生成的XML数据
 	 */
 	public static String getXmlFromList(List beanList){
@@ -46,8 +46,8 @@ public class ExtHelper {
 	}
 	/**
 	 * 通过List生成JSON数据
-	 * @param recordTotal 记录总数，不�?��与beanList中的记录数相�?
-	 * @param beanList 包含bean对象的集�?
+	 * @param recordTotal 记录总数，不一定与beanList中的记录数相等
+	 * @param beanList 包含bean对象的集合
 	 * @return 生成的JSON数据
 	 */
 	public static String getJsonFromList(long recordTotal , List beanList){
@@ -59,7 +59,7 @@ public class ExtHelper {
 	}
 	/**
 	 * 通过List生成JSON数据
-	 * @param beanList 包含bean对象的集�?
+	 * @param beanList 包含bean对象的集合
 	 * @return 生成的JSON数据
 	 */
 	public static String getJsonFromList(List beanList){

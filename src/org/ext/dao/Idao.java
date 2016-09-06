@@ -1,6 +1,7 @@
 package org.ext.dao;
 
 
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public interface Idao<T, PK extends Serializable> {
 	// 查询全部
 	public List<T> findAll(String xql);
 	
-	//分页操作(不带条件�?带一个条�?多个条件)
+	//分页操作(不带条件的 带一个条件 多个条件)
 	public Pager<T> findByPage(int pageNo,int pageSize,String xql);
 	public Pager<T> findByPage(int pageNo,int pageSize,Object key,String xql);
 	public Pager<T> findByPage(int pageNo,int pageSize,Object[] keys,String xql);

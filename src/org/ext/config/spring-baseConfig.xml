@@ -18,7 +18,7 @@
                      
 	<context:annotation-config></context:annotation-config>
 	<!-- 扫描 -->
-	<context:component-scan base-package="hx"></context:component-scan> 
+	<context:component-scan base-package="org.ext.*"></context:component-scan> 
 	 <!-- JDBC参数配置 -->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">
 		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
@@ -104,20 +104,13 @@
 		<property name="dataSource" ref="dataSource" />
 		
 		<property name="configLocation">
-			<value>classpath:config/hibernate/hibernate.cfg.xml</value>
+			<value>classpath:org/ext/hibernate/hibernate.cfg.xml</value>
 		</property>
 		
 		<property name="mappingResources">
 			<list>
-				<value>config/hibernate/hbm/User.hbm.xml</value>
-				<value>config/hibernate/hbm/TestPaper.hbm.xml</value>
-				<value>config/hibernate/hbm/ExamTopic.hbm.xml</value>
-				<value>config/hibernate/hbm/TestQuestion.hbm.xml</value>
-				<value>config/hibernate/hbm/SelectOption.hbm.xml</value>
-				<value>config/hibernate/hbm/Answer.hbm.xml</value>
-				<value>config/hibernate/hbm/ExamManage.hbm.xml</value>
-				<value>config/hibernate/hbm/Score.hbm.xml</value>
-				<value>config/hibernate/hbm/school/School.hbm.xml</value>
+				<value>org/ext/hibernate/hbm/Dep.hbm.xml</value>
+				<value>org/ext/hibernate/hbm/School.hbm.xml</value>
 			</list>
 		</property>
 		
@@ -149,7 +142,7 @@
 	</tx:advice>
 	
 	<aop:config>
-	   <aop:pointcut expression="execution(* hx.dao.*.*(..))" id="bussinessService"/>
+	   <aop:pointcut expression="execution(* org.ext.dao.*.*(..))" id="bussinessService"/>
 	    <aop:advisor advice-ref="txAdvice" pointcut-ref="bussinessService"/>
 	</aop:config>
 	

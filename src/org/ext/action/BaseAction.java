@@ -15,6 +15,10 @@ public class BaseAction extends ActionSupport {
 	public static final String SHOWADD = "showAdd";
 	public static final String SHOWUPDATE = "showUpdate";
 	
+	protected int id;
+
+	protected Integer[] ids;
+	
 	public String getParameter(String str) {
 		return ServletActionContext.getRequest().getParameter(str);
 	}
@@ -38,6 +42,22 @@ public class BaseAction extends ActionSupport {
 	public HttpServletRequest getRequest() {
 		return ServletActionContext.getRequest();
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+
+	
+
+	
+	
+	
 
 	
 }

@@ -21,6 +21,7 @@
 
 
 
-
+<include file="org/ext/config/struts/school.xml"></include>
+<include file="org/ext/config/struts/dep.xml"></include>
 </struts>
 
